@@ -517,8 +517,6 @@ Count reads that map to features using htseq-count. You should run htseq-count t
 
 ```htseq-count --stranded=reverse 3_2B_control_S3_L008.Aligned.out.sam Mus_musculus.GRCm39.112.gtf > htseq_reverse_3_2B_control_S3_L008```
 
-sbatch htseq.sh 
-Submitted batch job 16000861
 
 
 # Part 3 Step 14
