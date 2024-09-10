@@ -22,21 +22,21 @@ Using FastQC via the command line on Talapas, produce plots of the per-base qual
 **Answer:** My personally produced Per Base N-Content plots show the same trend as those produced by fastqc. However, my plots have their y-axis scaled by the max value. The fastqc plots are out of 100%. This allows me to see much smaller trends that are not visible in the fastqc plots. It appears as though R2 reads have extremely small non-zero counts of N's after the first base, making them visibly indistinguishable from zero even at a small scale.
 
 
-```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5}
+```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5, fig.cap="Per Base N-Content plots for 3_2B_control_S3_L008_R1_001 derived from Fastqc and personally produced script. Y-axis scale is adjusted on personally produced plot."}
 plot1 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/3_2B_control_S3_L008_R1_001_fastqc/Images/per_base_n_content.png')
 plot2 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/N_Content_3_2B_control_S3_L008_R1_001.png')
 
 grid.arrange(rasterGrob(plot1),rasterGrob(plot2),ncol=2, top = textGrob("Per Base N-Content for 3_2B_control_S3_L008_R1_001"))
 ```
 
-```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5}
+```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5, fig.cap="Per Base N-Content plots for 3_2B_control_S3_L008_R2_001 derived from Fastqc and personally produced script. Y-axis scale is adjusted on personally produced plot."}
 plot1 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/3_2B_control_S3_L008_R2_001_fastqc/Images/per_base_n_content.png')
 plot2 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/N_Content_3_2B_control_S3_L008_R2_001.png')
 
 grid.arrange(rasterGrob(plot1),rasterGrob(plot2),ncol=2, top = textGrob("Per Base N-Content for 3_2B_control_S3_L008_R2_001"))
 ```
 
-```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5}
+```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5, fig.cap="Per Base N-Content plots for 28_4D_mbnl_S20_L008_R1_001 derived from Fastqc and personally produced script. Y-axis scale is adjusted on personally produced plot."}
 plot1 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/28_4D_mbnl_S20_L008_R1_001_fastqc/Images/per_base_n_content.png')
 plot2 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/N_Content_28_4D_mbnl_S20_L008_R1_001.png')
 
@@ -44,7 +44,7 @@ grid.arrange(rasterGrob(plot1),rasterGrob(plot2),ncol=2, top = textGrob("Per Bas
 
 ```
 
-```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5}
+```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5, fig.cap="Per Base N-Content plots for 28_4D_mbnl_S20_L008_R2_001 derived from Fastqc and personally produced script. Y-axis scale is adjusted on personally produced plot."}
 plot1 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/28_4D_mbnl_S20_L008_R2_001_fastqc/Images/per_base_n_content.png')
 plot2 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/N_Content_28_4D_mbnl_S20_L008_R2_001.png')
 
@@ -61,7 +61,7 @@ Run your quality score plotting script from your Demultiplexing assignment in Bi
 
 
 
-```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5}
+```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5,fig.cap="Per Base Quality Score plots for 3_2B_control_S3_L008_R1_001 derived from Fastqc and personally produced script."}
 plot1 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/3_2B_control_S3_L008_R1_001_fastqc/Images/per_base_quality.png')
 plot2 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/3_2B_control_S3_L008_R1_001.png')
 
@@ -69,21 +69,21 @@ grid.arrange(rasterGrob(plot1),rasterGrob(plot2),ncol=2, top = textGrob("Per Bas
 ```
 
 
-```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5}
+```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5,fig.cap="Per Base Quality Score plots for 3_2B_control_S3_L008_R2_001 derived from Fastqc and personally produced script."}
 plot1 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/3_2B_control_S3_L008_R2_001_fastqc/Images/per_base_quality.png')
 plot2 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/3_2B_control_S3_L008_R2_001.png')
 
 grid.arrange(rasterGrob(plot1),rasterGrob(plot2),ncol=2, top = textGrob("Per Base Quality Score for 3_2B_control_S3_L008_R2_001"))
 ```
 
-```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5}
+```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5,fig.cap="Per Base Quality Score plots for 28_4D_mbnl_S20_L008_R1_001 derived from Fastqc and personally produced script."}
 plot1 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/28_4D_mbnl_S20_L008_R1_001_fastqc/Images/per_base_quality.png')
 plot2 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/28_4D_mbnl_S20_L008_R1_001.png')
 
 grid.arrange(rasterGrob(plot1),rasterGrob(plot2),ncol=2, top = textGrob("Per Base Quality Score for 28_4D_mbnl_S20_L008_R1_001"))
 ```
 
-```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5}
+```{r, echo = FALSE, eval= TRUE, fig.width=12, fig.height=5, fig.cap="Per Base Quality Score plots for 28_4D_mbnl_S20_L008_R2_001 derived from Fastqc and personally produced script."}
 plot1 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/28_4D_mbnl_S20_L008_R2_001_fastqc/Images/per_base_quality.png')
 plot2 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/28_4D_mbnl_S20_L008_R2_001.png')
 
@@ -125,7 +125,7 @@ Plot the trimmed read length distributions for both R1 and R2 reads (on the same
 
 
 
-```{r, echo = FALSE, eval= TRUE, fig.width=14, fig.height=8}
+```{r, echo = FALSE, eval= TRUE, fig.width=14, fig.height=8, fig.cap= "Distribution of sequence lengths for 28_4D_mbnl_S20_L008_001 & 3_2B_control_S3_L008 after trimming. Derived from Trimmomatic paired end forward and reverse fastq files."}
 plot1 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/Trimmed_28_distributions.png')
 plot2 <- readPNG('/Users/zachgirard/bioinfo/Bi623/QAA/Trimmed_3_distributions.png')
 
@@ -155,32 +155,15 @@ Unmapped: 496075
 
 Demonstrate convincingly whether or not the data are from "strand-specific" RNA-Seq libraries. Include any comands/scripts used. Briefly describe your evidence, using quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z.").
 
-Answer: I propose the library that these data are not strand-specific, because 42.6% and 82.7% of reads in the stranded=reverse htseq-count data is mapped to genes, as opposed to 1.79% and 3.5% in the stranded=yes htseq-count data. Per the htseq-count documentation, -stranded=yes is for strand-specific libraries.
+**Answer**: I propose the library that these data are not strand-specific, because 42.6% and 82.7% of reads in the stranded=reverse htseq-count data is mapped to genes, as opposed to 1.79% and 3.5% in the stranded=yes htseq-count data. Per the htseq-count documentation, -stranded=yes is for strand-specific libraries.
 
+| Htseq Condition                     | Mapped  | Total    | Proportion |
+|-------------------------------------|---------|----------|------------|
+| htseq_stranded_3_2B_control_S3_L008 | 221658  | 12359963 | 0.0179     |
+| htseq_reverse_3_2B_control_S3_L008  | 5260168 | 12359963 | 0.426      |
+| htseq_stranded_28_4D_mbnl_S20_L008  | 411314  | 11725400 | 0.035      |
+| htseq_reverse_28_4D_mbnl_S20_L008   | 9700357 | 11725400 | 0.827      |
 
-htseq_stranded_3_2B_control_S3_L008\
-Mapped: 221658\
-Total: 12359963\
-Proportion: 0.0179
-
-
-htseq_reverse_3_2B_control_S3_L008\
-Mapped: 5260168\
-Total: 12359963\
-Proportion: 0.426
-
-
-
-htseq_stranded_28_4D_mbnl_S20_L008\
-Mapped:411314\
-Total: 11725400\
-Proportion: 0.035
-
-
-htseq_reverse_28_4D_mbnl_S20_L008\
-Mapped: 9700357\
-Total: 11725400\
-Proportion: 0.827
 
 
 
