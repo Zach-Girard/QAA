@@ -83,7 +83,7 @@ Using FastQC via the command line on Talapas, produce plots of the per-base qual
 Created a script ```N_Content.py`` to calculate percent N content per base and plot.
 
 
-Answer: My personally produced Per Base N-Content plots show the same trend as those produced by fastqc. However, my plots have their y-axis scaled by the max value. The fastqc plots are out of 100%. This allows me to see much smaller trends that are not visible in the fastqc plots.
+Answer: My personally produced Per Base N-Content plots show the same trend as those produced by fastqc. However, my plots have their y-axis scaled by the max value. The fastqc plots are out of 100%. This allows me to see much smaller trends that are not visible in the fastqc plots. For R2 reads, it appears as though there are extremely small non-zero counts of N's past the first base position.
 
 
 
