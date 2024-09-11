@@ -523,7 +523,8 @@ Count reads that map to features using htseq-count. You should run htseq-count t
 
 Demonstrate convincingly whether or not the data are from "strand-specific" RNA-Seq libraries. Include any comands/scripts used. Briefly describe your evidence, using quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z.").
 
-Answer: I propose the library that these data are not strand-specific, because 42.6% and 82.7% of reads in the stranded=reverse htseq-count data is mapped to genes, as opposed to 1.79% and 3.5% in the stranded=yes htseq-count data. 
+Answer: I propose the library that these data are reverse-stranded, because 42.6% and 82.7% of reads in the stranded=reverse htseq-count data is mapped to genes, as opposed to 1.79% and 3.5% in the stranded=yes htseq-count data. Per the htseq-count documentation, -stranded=yes is for forward strand-specific libraries.
+
 
 
 ```cat htseq_stranded_3_2B_control_S3_L008 | grep -v "^__" | awk '{sum += $2} END {print sum}'```
